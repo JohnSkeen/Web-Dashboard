@@ -1,0 +1,60 @@
+/*===========================================
+   Recent Activity Styles
+===========================================*/
+
+.recent-activity {
+  width: 95%;
+  margin: 15px auto 30px;
+  @include mq(large) {
+    padding-left: 10px;
+  }
+}
+
+.recent-activity ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.recent-activity-list {
+  padding: 0;
+}
+
+.recent-activity-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: em(80px);
+}
+
+.recent-activity-info {
+  padding-left: 15px;
+}
+
+.recent-activity-info p {
+  color: $boulder;
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+.recent-activity a {
+  color: $header-background;
+  text-decoration: none;
+}
+
+.recent-activity-break {
+  border: solid $silver-chalice 1px;
+  display: inline;
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px 0;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+}
+
+.recent-activity a:last-of-type {
+  margin-left: auto;
+}

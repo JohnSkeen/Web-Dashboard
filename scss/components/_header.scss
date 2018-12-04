@@ -1,0 +1,119 @@
+/*===========================================
+   Header Styles
+===========================================*/
+
+header {
+  background-color: $header-background;
+  display: flex;
+
+  @include mq(large) {
+    z-index: 2;
+    position: fixed;
+    width: 100%;
+    top: 0;
+  }
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+
+  @include mq(small) {
+    flex-direction: row;
+  }
+}
+
+header li {
+    display: flex;
+    align-items: center;
+}
+
+header li:first-of-type {
+  @include mq(medium) {
+    flex: 1;
+  }
+}
+
+.header-title {
+  color: $white;
+  font-size: em(20px);
+}
+
+.header-info li:first-of-type {
+  margin-right: auto;
+}
+
+.your {
+  font-weight: 700;
+  padding-left: em(10px);
+
+  @include mq(medium) {
+    padding-left: em(15px);
+  }
+}
+
+.app {
+  font-weight: 200;
+}
+
+.tm {
+  font-size: em(12px);
+  font-weight: 200;
+  vertical-align: top;
+}
+
+header svg {
+  height: 20px;
+
+  @include mq(medium) {
+    height: 30px;
+  }
+}
+
+.header-border {
+  border: $nav-background solid 1px;
+  border-top: none;
+  border-right: none;
+  border-bottom: none;
+  height: em(30px);
+  margin: 0 em(10px);
+
+  @include mq(medium) {
+    margin: 0 em(20px);
+  }
+}
+
+.user-pic {
+  height: em(30px);
+  border-radius: 50%;
+  padding-right: em(10px);
+
+  @include mq(medium) {
+    padding-right: 0;
+  }
+}
+
+.user-name {
+  color: $white;
+  padding: 0 0 0 em(10px);
+  display: none;
+
+  @include mq(medium) {
+    display: list-item;
+    padding: 0 em(15px) 0 em(10px);
+  }
+}
+
+#alertIndicator {
+  border-radius: 50%;
+  background-color: $notification;
+  height: 7px;
+  width: 7px;
+  display: inline-block;
+  margin: -25px 0 0 -7px;
+}

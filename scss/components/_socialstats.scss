@@ -1,0 +1,88 @@
+/*===========================================
+   Social Stats Styles
+===========================================*/
+
+.social-stats {
+  margin: 0 auto;
+  width: 95%;
+}
+
+.social-stats h3 {
+  padding-left: 10px;
+}
+
+.social-containers {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 auto;
+
+  @include mq(medium) {
+    flex-direction: row;
+  }
+}
+
+.twitter-container,
+.facebook-container,
+.google-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: 1px $silver-chalice solid;
+  margin: 5px 5px;
+  padding-left: 10px;
+  background-color: $alabaster;
+
+  @include mq(medium) {
+    padding-left: 16px;
+    margin: 10px 10px;
+    width: 30%;
+  }
+}
+
+.twitter-svg,
+.facebook-svg,
+.google-svg {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: $header-background;
+}
+
+.twitter-svg svg,
+.google-svg svg {
+  height: 30px;
+  width: 30px;
+  display: block;
+  margin: 0 auto;
+}
+
+.facebook-svg svg {
+  height: 40px;
+  width: 40px;
+  display: block;
+  margin: 0 auto;
+}
+
+.twitter-stats,
+.facebook-stats,
+.google-stats {
+  padding: 20px;
+}
+
+.twitter-stats h4,
+.facebook-stats h4,
+.google-stats h4 {
+  color: $header-background;
+  margin: 0 auto;
+}
+
+.twitter-stats span,
+.facebook-stats span,
+.google-stats span {
+  font-size: 2.5em;
+  color: $boulder;
+  font-weight: $font-weight--thin;
+}

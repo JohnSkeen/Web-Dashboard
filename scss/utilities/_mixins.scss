@@ -1,0 +1,31 @@
+/*===========================================
+   Mixins
+===========================================*/
+
+// Media Queries
+
+@mixin mq($break) {
+  @if $break == "small" {
+    @media(min-width: $brkpoint-sm) {
+      @content;
+    }
+  }
+  @else if $break == "medium" {
+    @media(min-width: $brkpoint-md + 1) {
+      @content;
+    }
+  }
+  @else if $break == "large" {
+    @media(min-width: $brkpoint-lg) {
+      @content;
+    }
+  }
+  @else if $break == "xlarge" {
+    @media(min-width: $brkpoint-xlg) {
+      @content;
+    }
+  }
+  @else {
+    @error "'#{$break}' is not a valid entry."
+  }
+};

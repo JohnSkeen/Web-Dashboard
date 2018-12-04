@@ -1,0 +1,138 @@
+/*===========================================
+   Message and Settings
+===========================================*/
+
+.form-section {
+  @include mq(medium) {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    width: 95%;
+  }
+}
+
+.message-user,
+.user-settings-container {
+  @include mq(medium) {
+    height: 100%;
+    width: 50%;
+  }
+}
+
+.message-user-fieldset,
+.user-settings-fieldset {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.message-search,
+.message-textarea,
+.message-send {
+  width: 100%;
+  margin: 10px auto;
+}
+
+.message-send {
+  margin-top: 20px;
+}
+
+.message-search,
+.message-textarea {
+  background-color: $alabaster;
+  font-size: em(14px);
+  border-radius: 4px;
+  border: $alto solid 1px;
+  padding: 5px;
+
+  @include mq(medium) {
+    font-size: em(16px);
+  }
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+color: $alto;
+}
+::-moz-placeholder { /* Firefox 19+ */
+color: $alto;
+}
+:-ms-input-placeholder { /* IE 10+ */
+color: $alto;
+}
+:-moz-placeholder { /* Firefox 18- */
+color: $alto;
+}
+
+.message-send,
+#save {
+  background: $ship-cove;
+}
+
+#save,
+#cancel,
+.message-send {
+  border-radius: 4px;
+  color: $white;
+  font-weight: $font-weight--bold;
+  padding: 10px;
+  font-size: em(12px);
+  border: none;
+}
+
+#save,
+#cancel {
+  width: 46%;
+}
+
+#cancel {
+  background: $silver-chalice;
+}
+
+fieldset {
+  border: none;
+}
+
+fieldset legend {
+  color: $boulder;
+  font-size: em(14px);
+  font-weight: $font-weight--bold;
+}
+
+.user-settings-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
+  align-items: flex-end;
+}
+
+.notifications-email,
+.set-public {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.notifications p {
+  font-size: em(14px);
+  color: $boulder;
+
+  @include mq(medium) {
+    font-size: em(16px);
+  }
+}
+
+.timezone {
+  width: 100%;
+  border-radius: 4px;
+  border-color: $silver-chalice;
+  margin-top: 63px;
+  padding: 5px;
+}
+
+.timezone:first-child {
+  color: $alto;
+}

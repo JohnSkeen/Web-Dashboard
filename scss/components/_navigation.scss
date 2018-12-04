@@ -1,0 +1,52 @@
+/*===========================================
+   Navigation Styles
+===========================================*/
+
+nav ul {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.navigation {
+  display: flex;
+  background-color: $nav-background;
+}
+
+.nav {
+  width: 100%;
+
+  @include mq(large) {
+    width: 0;
+  }
+}
+
+.navi {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+
+  @include mq(large) {
+    flex-direction: column;
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    height: 100%;
+    width: 80px;
+    margin-top: 62px;
+    justify-content: flex-start;
+    background-color: $nav-background;
+  }
+}
+
+.navigation svg {
+  width: em(30px);
+  padding: em(10px) 0;
+
+  @include mq(medium) {
+    padding: em(25px) em(25px);
+  }
+}

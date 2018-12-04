@@ -1,0 +1,29 @@
+/*===========================================
+   Typography
+===========================================*/
+
+
+body {
+  font-family: $font-stack-primary;
+  font-weight: $font-weight--medium;
+}
+
+h3 {
+  color: $boulder;
+  font-size: em(14px);
+}
+
+.member-activity p,
+.member-activity a {
+  font-size: em(14px);
+
+  @include mq(medium) {
+    font-size: em(16px);
+  }
+}
+
+
+.fas {
+  font-size: em(24px);
+  color: $alto;
+}

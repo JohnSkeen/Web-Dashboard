@@ -1,0 +1,73 @@
+/*===========================================
+   New Members Styles
+===========================================*/
+
+.new-members {
+  width: 95%;
+  margin: 15px auto 30px;
+  @include mq(large) {
+    padding-right: 10px;
+  }
+}
+
+.new-members ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.new-members-list {
+  padding: 0;
+}
+
+.new-members-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: em(80px);
+}
+
+.new-member-info {
+  padding-left: 15px;
+}
+
+.new-member-info p {
+  color: $boulder;
+  margin: 0;
+  padding-bottom: 10px;
+}
+
+.new-members-container p {
+  color: $boulder;
+}
+
+.new-member-info a {
+  color: $header-background;
+  text-decoration: none;
+}
+
+.new-members-break {
+  border: solid $silver-chalice 1px;
+  display: inline;
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px 0;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+}
+
+.member-activity img {
+  border-radius: 50%;
+  width: 5em;
+
+  @include mq(large) {
+    width: 3em;
+  }
+}
+
+.new-members-container p:last-of-type {
+  margin-left: auto;
+}
