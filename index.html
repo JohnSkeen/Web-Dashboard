@@ -15,8 +15,9 @@
         <li>
           <span class="header-title your"><strong>Your</strong></span><span class="header-title app">App</span><span class="header-title tm">&trade;</span>
         </li>
-        <li id="alertIcon">
-          <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32" xml:space="preserve">
+        <li id="notiContainer">
+          <div id="notiCounter"></div>
+          <svg version="1.1" id="alertIcon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32" xml:space="preserve">
             <style type="text/css">
               .st0{fill:#FFFFFF;}
             </style>
@@ -27,7 +28,24 @@
               </g>
             </g>
           </svg>
-          <span id="alertIndicator"></span>
+          <div id="notifications">
+            <h3>Notifications</h3>
+            <div style="height:140px;">
+              <ul class="notiList">
+                <li class="noti-item">
+                  <img class="noti-pic" src="images/member-1.jpg" alt="Victoria Chambers Picture">
+                  <p>Victoria Chambers commented on YourApp's SEO Tips</p>
+                  <i>4 Hours Ago</i>
+                </li>
+                <li class="noti-item">
+                  <img class="noti-pic" src="images/member-2.jpg" alt="Dale Byrd Picture">
+                  <p>Dale Byrd liked the post Facebook's Changes for 2016</p>
+                  <i>5 Hours Ago</i>
+                </li>
+              </ul>
+            </div> <!-- Notifications -->
+            <div class="seeAll"><a href="#">See All</a></div>
+          </div>
         </li>
         <li>
           <hr class="header-border">

@@ -1,3 +1,164 @@
 /*===========================================
    Notification Dropdown Styles
 ===========================================*/
+
+// ul {
+//     display: block;
+//     background: #45619D;
+//     list-style: none;
+//     margin: 0;
+//     padding: 12px 10px;
+//     height: 21px;
+// }
+// ul li {
+//     float: left;
+//     font: 13px helvetica;
+//     font-weight: bold;
+//     margin: 3px 0;
+// }
+// ul li a {
+//     color: #FFF;
+//     text-decoration: none;
+//     padding: 6px 15px;
+//     cursor: pointer;
+// }
+// ul li a:hover {
+//     background: #425B90;
+//     text-decoration: none;
+//     cursor: pointer;
+// }
+
+#notiContainer {
+    position:relative;
+}
+
+/* A CIRCLE LIKE BUTTON IN THE TOP MENU. */
+#alertIcon {
+    height: 22px;
+    // line-height: 22px;
+    // border-radius: 50%;
+    // -moz-border-radius: 50%;
+    // -webkit-border-radius: 50%;
+    margin: -3px 10px 0 10px;
+    cursor: pointer;
+
+    @include mq(medium) {
+      height: 30px;
+    }
+}
+
+/* THE POPULAR RED NOTIFICATIONS COUNTER. */
+#notiCounter {
+    display: block;
+    position: absolute;
+    background: $notification;
+    color: $white;
+    font-size: 12px;
+    font-weight: normal;
+    padding: 1px 4px;
+    margin: -8px 0 0 25px;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    z-index: 1;
+}
+
+/* THE NOTIFICAIONS WINDOW. THIS REMAINS HIDDEN WHEN THE PAGE LOADS. */
+#notifications {
+    display: none;
+    width: 250px;
+    position: absolute;
+    top: 30px;
+    left: -180px;
+    background: #FFF;
+    border: solid 1px rgba(100, 100, 100, .20);
+    -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, .20);
+    z-index: 0;
+
+    @include mq(medium) {
+      top: 40px;
+      width: 350px;
+      left: -300px;
+    }
+}
+/* AN ARROW LIKE STRUCTURE JUST OVER THE NOTIFICATIONS WINDOW */
+#notifications:before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    color: transparent;
+    border: 10px solid $alto;
+    border-color: transparent transparent $white;
+    margin-top: -20px;
+    margin-left: 188px;
+
+    @include mq(medium) {
+      margin-left: 312px;
+    }
+}
+
+#notifications p {
+  color: $boulder;
+  font-size: 12px;
+  padding-left: 10px;
+}
+
+#notifications i {
+  color: $boulder;
+  font-size: 10px;
+
+  @include mq(medium) {
+    font-size: 12px;
+  }
+}
+
+#notifications h3 {
+    display: block;
+    color: #333;
+    background: $white;
+    font-weight: bold;
+    font-size: 13px;
+    padding: 8px;
+    margin: 0;
+    border-bottom: solid 1px rgba(100, 100, 100, .30);
+}
+
+.notiList {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+
+.noti-item:hover {
+  background-color: $alto;
+}
+
+.noti-pic {
+  display: none;
+
+  @include mq(medium) {
+    display: block;
+    border-radius: 50%;
+    width: 30px;
+    margin-left: 10px;
+  }
+}
+
+.seeAll {
+    background: $alabaster;
+    padding: 8px;
+    font-size: 12px;
+    font-weight: bold;
+    border-top: solid 1px rgba(100, 100, 100, .30);
+    text-align: center;
+}
+.seeAll a {
+    color: $nav-background;
+}
+.seeAll a:hover {
+    background: $alabaster;
+    color: $nav-background;
+    text-decoration: underline;
+}

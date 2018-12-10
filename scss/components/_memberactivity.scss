@@ -12,6 +12,7 @@
 }
 
 .member-activity-border {
+
   @include mq(large) {
     border: $alto solid 1px;
     border-top: none;

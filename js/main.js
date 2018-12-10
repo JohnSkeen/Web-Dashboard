@@ -192,12 +192,6 @@ $('#alertClose').click(function(){
   $('.alertBox').fadeOut();
 });
 
-// Alert open
-$('#alertIcon').click(function(){
-  $('.alertBox').fadeIn();
-  $('#alertIndicator').hide();
-});
-
 // Autocomplete
 
 //supply userName array
@@ -306,4 +300,45 @@ document.addEventListener("click", function (e) {
 
 document.addEventListener("DOMContentLoaded", function() {
   autocomplete(document.getElementById("userSearch"), userNames);
+});
+
+$(document).ready(function () {
+
+    // ANIMATEDLY DISPLAY THE NOTIFICATION COUNTER.
+    $('#notiCounter')
+        .css({ opacity: 0 })
+        .text('2')  // ADD DYNAMIC VALUE (YOU CAN EXTRACT DATA FROM DATABASE OR XML).
+        .css({ top: '-10px' })
+        .animate({ top: '-2px', opacity: 1 }, 500);
+
+    $('#alertIcon').click(function () {
+
+        // TOGGLE (SHOW OR HIDE) NOTIFICATION WINDOW.
+        $('#notifications').fadeToggle('fast', 'linear', function () {
+            if ($('#notifications').is(':hidden')) {
+                $('#alertIcon').css('background-color', '#7477BF');
+            }
+            // CHANGE BACKGROUND COLOR OF THE BUTTON.
+            else $('#alertIcon').css('background-color', '#7477BF');
+        });
+
+        $('#notiCounter').fadeOut('slow');     // HIDE THE COUNTER.
+
+        return false;
+    });
+
+    // HIDE NOTIFICATIONS WHEN CLICKED ANYWHERE ON THE PAGE.
+    $(document).click(function () {
+        $('#notifications').hide();
+
+        // CHECK IF NOTIFICATION COUNTER IS HIDDEN.
+        if ($('#notiCounter').is(':hidden')) {
+            // CHANGE BACKGROUND COLOR OF THE BUTTON.
+            $('#alertIcon').css('background-color', '#7477BF');
+        }
+    });
+
+    $('#notifications').click(function () {
+        return false;       // DO NOTHING WHEN CONTAINER IS CLICKED.
+    });
 });

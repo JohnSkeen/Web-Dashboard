@@ -50,10 +50,10 @@ header li:first-of-type {
 
 .your {
   font-weight: 700;
-  padding-left: em(10px);
+  margin-left: em(15px);
 
   @include mq(medium) {
-    padding-left: em(15px);
+    padding-left: em(20px);
   }
 }
 
@@ -67,13 +67,13 @@ header li:first-of-type {
   vertical-align: top;
 }
 
-header svg {
-  height: 20px;
-
-  @include mq(medium) {
-    height: 30px;
-  }
-}
+// header svg {
+//   height: 20px;
+//
+//   @include mq(medium) {
+//     height: 30px;
+//   }
+// }
 
 .header-border {
   border: $nav-background solid 1px;
@@ -81,20 +81,16 @@ header svg {
   border-right: none;
   border-bottom: none;
   height: em(30px);
-  margin: 0 em(10px);
-
-  @include mq(medium) {
-    margin: 0 em(20px);
-  }
+  margin: 0 em(20px) 0 em(10px);
 }
 
 .user-pic {
   height: em(30px);
   border-radius: 50%;
-  padding-right: em(10px);
+  margin-right: em(15px);
 
   @include mq(medium) {
-    padding-right: 0;
+    margin-right: 0;
   }
 }
 
@@ -108,12 +104,12 @@ header svg {
     padding: 0 em(15px) 0 em(10px);
   }
 }
-
-#alertIndicator {
-  border-radius: 50%;
-  background-color: $notification;
-  height: 7px;
-  width: 7px;
-  display: inline-block;
-  margin: -25px 0 0 -7px;
-}
+//
+// #alertIndicator {
+//   border-radius: 50%;
+//   background-color: $notification;
+//   height: 7px;
+//   width: 7px;
+//   display: inline-block;
+//   margin: -25px 0 0 -7px;
+// }
