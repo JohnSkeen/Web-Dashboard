@@ -21,13 +21,13 @@
 
 .wrapper .dashboard {
   @include mq(large) {
-    width: 80%;
+    width: 95%;
     padding-left: 64px;
     margin: 0 auto;
   }
 
   @include mq(xlarge) {
-    width: 60%;
+    width: 70%;
     padding-left: 64px;
     margin: 0 auto;
   }
@@ -275,4 +275,29 @@ form.example::after {
     width: 95%;
     margin: 0 auto;
   }
+}
+
+input:focus,
+select:focus,
+button:focus,
+textarea:focus {
+  outline-color: $nav-background;
+  border-color: transparent;
+}
+
+.other-charts,
+.member-activity {
+  border-top: 1px $alto solid;
+  border-bottom: 1px $alto solid;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding-top: 10px;
+}
+
+.member-activity {
+  padding-bottom: 10px;
+}
+
+.other-charts {
+  padding-bottom: 25px;
 }

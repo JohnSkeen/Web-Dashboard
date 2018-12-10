@@ -166,6 +166,7 @@
             <h3>DAILY TRAFFIC</h3>
             <canvas id="myBarChart" style="height: 100%;"></canvas>
           </div>
+          <hr class="other-chart-border">
           <div class="doughnut-chart">
             <h3>MOBILE USERS</h3>
             <canvas id="myDoughnutChart" style="height: 100%;"></canvas>
@@ -269,6 +270,7 @@
               </li> <!-- New Members Container -->
             </ul> <!-- New Members List -->
           </div> <!-- New Members -->
+          <hr class="member-activity-border">
           <div class="recent-activity">
             <h3>RECENT ACTIVITY</h3>
             <ul class="recent-activity-list">
@@ -311,11 +313,11 @@
           </div> <!-- Recent Activity -->
         </div> <!-- Member Activity -->
         <div class="form-section">
-          <form class="message-user" action="index.html" method="post">
+          <form class="message-user" autocomplete="off">
             <fieldset class="message-user-fieldset">
               <legend>MESSAGE USER</legend>
-              <div id="user-search-container">
-                <input class="message-search" type="text" id="user-search" name="search" placeholder="Search for User">
+              <div class="autocomplete">
+                <input class="message-search" type="text" id="userSearch" name="search" placeholder="Search for User">
               </div>
               <textarea class="message-textarea" name="name" id="userMsg" rows="8" placeholder="Message for User"></textarea>
               <button class="message-send" type="submit" name="send">SEND</button>

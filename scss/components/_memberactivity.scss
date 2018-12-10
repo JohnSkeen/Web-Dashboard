@@ -1,15 +1,38 @@
 /*===========================================
-   Recent Activity Styles
+   Member Activity Styles
 ===========================================*/
 
+.member-activity img {
+  border-radius: 50%;
+  width: 5em;
+
+  @include mq(large) {
+    width: 3em;
+  }
+}
+
+.member-activity-border {
+  @include mq(large) {
+    border: $alto solid 1px;
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+    height: 551px;
+    margin: -10px em(15px) -10px;
+  }
+}
+
+.new-members,
 .recent-activity {
   width: 95%;
   margin: 15px auto 30px;
   @include mq(large) {
-    padding-left: 10px;
+    margin: 0 auto;
+    width: 48%;
   }
 }
 
+.new-members ul,
 .recent-activity ul {
   list-style-type: none;
   display: flex;
@@ -17,10 +40,12 @@
   justify-content: space-between;
 }
 
+.new-members-list,
 .recent-activity-list {
   padding: 0;
 }
 
+.new-members-container,
 .recent-activity-container {
   display: flex;
   flex-direction: row;
@@ -29,21 +54,29 @@
   height: em(80px);
 }
 
+.new-member-info,
 .recent-activity-info {
   padding-left: 15px;
 }
 
+.new-member-info p,
 .recent-activity-info p {
   color: $boulder;
   margin: 0;
   padding-bottom: 10px;
 }
 
+.new-members-container p {
+  color: $boulder;
+}
+
+.new-member-info a,
 .recent-activity a {
   color: $header-background;
   text-decoration: none;
 }
 
+.new-members-break,
 .recent-activity-break {
   border: solid $silver-chalice 1px;
   display: inline;
@@ -57,4 +90,16 @@
 
 .recent-activity a:last-of-type {
   margin-left: auto;
+}
+
+.new-members-container p:last-of-type {
+  margin-left: auto;
+}
+
+.recent-activity h3 {
+  padding-top: 10px;
+
+  @include mq(large) {
+    padding-top: 0;
+  }
 }

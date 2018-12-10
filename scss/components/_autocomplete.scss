@@ -1,0 +1,52 @@
+/*===========================================
+  Autocomplete Styles
+===========================================*/
+
+* { box-sizing: border-box; }
+
+.autocomplete {
+  /*the container must be positioned relative:*/
+  position: relative;
+  display: inline-block;
+}
+.autocomplete input {
+  border: 1px solid $silver-chalice;
+  background-color: $alabaster;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.autocomplete input[type=text] {
+  background-color: $alabaster;
+  width: 100%;
+}
+.autocomplete input[type=submit] {
+  background-color: $ship-cove;
+  color: #fff;
+}
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid $silver-chalice;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0;
+}
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: $white;
+  border-bottom: 1px solid $silver-chalice;
+}
+.autocomplete-items div:hover {
+  /*when hovering an item:*/
+  background-color: $silver-chalice;
+}
+.autocomplete-active {
+  /*when navigating through the items using the arrow keys:*/
+  background-color: $ship-cove !important;
+  color: $white;
+}

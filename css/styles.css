@@ -324,12 +324,12 @@ template {
 
 @media (min-width: 1024px) {
   .wrapper .dashboard {
-    width: 80%;
+    width: 95%;
     padding-left: 64px;
     margin: 0 auto; } }
 @media (min-width: 1400px) {
   .wrapper .dashboard {
-    width: 60%;
+    width: 70%;
     padding-left: 64px;
     margin: 0 auto; } }
 
@@ -540,6 +540,27 @@ form.example::after {
     width: 95%;
     margin: 0 auto; } }
 
+input:focus,
+select:focus,
+button:focus,
+textarea:focus {
+  outline-color: #4d4c72;
+  border-color: transparent; }
+
+.other-charts,
+.member-activity {
+  border-top: 1px #bfbfbf solid;
+  border-bottom: 1px #bfbfbf solid;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding-top: 10px; }
+
+.member-activity {
+  padding-bottom: 10px; }
+
+.other-charts {
+  padding-bottom: 25px; }
+
 /*===========================================
    Navigation Styles
 ===========================================*/
@@ -580,9 +601,9 @@ nav ul {
 .navigation svg {
   width: 1.875em;
   padding: 0.625em 0; }
-  @media (min-width: 769px) {
+  @media (min-width: 1024px) {
     .navigation svg {
-      padding: 1.5625em 1.5625em; } }
+      margin: 1.5625em 1.5625em; } }
 
 /*===========================================
    Typography
@@ -783,56 +804,8 @@ header svg {
   font-weight: 200; }
 
 /*===========================================
-   New Members Styles
+   Member Activity Styles
 ===========================================*/
-.new-members {
-  width: 95%;
-  margin: 15px auto 30px; }
-  @media (min-width: 1024px) {
-    .new-members {
-      padding-right: 10px; } }
-
-.new-members ul {
-  list-style-type: none;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; }
-
-.new-members-list {
-  padding: 0; }
-
-.new-members-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  height: 5em; }
-
-.new-member-info {
-  padding-left: 15px; }
-
-.new-member-info p {
-  color: #797979;
-  margin: 0;
-  padding-bottom: 10px; }
-
-.new-members-container p {
-  color: #797979; }
-
-.new-member-info a {
-  color: #7477BF;
-  text-decoration: none; }
-
-.new-members-break {
-  border: solid #b2b2b2 1px;
-  display: inline;
-  width: 100%;
-  margin-top: 20px;
-  padding: 10px 0;
-  border-left: none;
-  border-right: none;
-  border-bottom: none; }
-
 .member-activity img {
   border-radius: 50%;
   width: 5em; }
@@ -840,28 +813,37 @@ header svg {
     .member-activity img {
       width: 3em; } }
 
-.new-members-container p:last-of-type {
-  margin-left: auto; }
+@media (min-width: 1024px) {
+  .member-activity-border {
+    border: #bfbfbf solid 1px;
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+    height: 551px;
+    margin: -10px 0.9375em -10px; } }
 
-/*===========================================
-   Recent Activity Styles
-===========================================*/
+.new-members,
 .recent-activity {
   width: 95%;
   margin: 15px auto 30px; }
   @media (min-width: 1024px) {
+    .new-members,
     .recent-activity {
-      padding-left: 10px; } }
+      margin: 0 auto;
+      width: 48%; } }
 
+.new-members ul,
 .recent-activity ul {
   list-style-type: none;
   display: flex;
   flex-direction: column;
   justify-content: space-between; }
 
+.new-members-list,
 .recent-activity-list {
   padding: 0; }
 
+.new-members-container,
 .recent-activity-container {
   display: flex;
   flex-direction: row;
@@ -869,18 +851,25 @@ header svg {
   align-items: center;
   height: 5em; }
 
+.new-member-info,
 .recent-activity-info {
   padding-left: 15px; }
 
+.new-member-info p,
 .recent-activity-info p {
   color: #797979;
   margin: 0;
   padding-bottom: 10px; }
 
+.new-members-container p {
+  color: #797979; }
+
+.new-member-info a,
 .recent-activity a {
   color: #7477BF;
   text-decoration: none; }
 
+.new-members-break,
 .recent-activity-break {
   border: solid #b2b2b2 1px;
   display: inline;
@@ -893,6 +882,15 @@ header svg {
 
 .recent-activity a:last-of-type {
   margin-left: auto; }
+
+.new-members-container p:last-of-type {
+  margin-left: auto; }
+
+.recent-activity h3 {
+  padding-top: 10px; }
+  @media (min-width: 1024px) {
+    .recent-activity h3 {
+      padding-top: 0; } }
 
 /*===========================================
    Message and Settings
@@ -1009,11 +1007,14 @@ fieldset legend {
   width: 100%;
   border-radius: 4px;
   border-color: #b2b2b2;
-  margin-top: 63px;
+  margin-top: 73px;
   padding: 5px; }
 
 .timezone:first-child {
   color: #bfbfbf; }
+
+.form-section {
+  padding-top: 11px; }
 
 /*===========================================
    Slider Button
@@ -1085,5 +1086,60 @@ input:checked + .slider:before {
 input:checked + .slider:after {
   content: 'ON';
   left: 25%; }
+
+/*===========================================
+  Autocomplete Styles
+===========================================*/
+* {
+  box-sizing: border-box; }
+
+.autocomplete {
+  /*the container must be positioned relative:*/
+  position: relative;
+  display: inline-block; }
+
+.autocomplete input {
+  border: 1px solid #b2b2b2;
+  background-color: #fbfbfb;
+  padding: 10px;
+  font-size: 16px; }
+
+.autocomplete input[type=text] {
+  background-color: #fbfbfb;
+  width: 100%; }
+
+.autocomplete input[type=submit] {
+  background-color: #7377BF;
+  color: #fff; }
+
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #b2b2b2;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 100%;
+  left: 0;
+  right: 0; }
+
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  border-bottom: 1px solid #b2b2b2; }
+
+.autocomplete-items div:hover {
+  /*when hovering an item:*/
+  background-color: #b2b2b2; }
+
+.autocomplete-active {
+  /*when navigating through the items using the arrow keys:*/
+  background-color: #7377BF !important;
+  color: #fff; }
+
+/*===========================================
+   Notification Dropdown Styles
+===========================================*/
 
 /*# sourceMappingURL=styles.css.map */

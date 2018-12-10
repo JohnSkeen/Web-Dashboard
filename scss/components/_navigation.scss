@@ -46,7 +46,7 @@ nav ul {
   width: em(30px);
   padding: em(10px) 0;
 
-  @include mq(medium) {
-    padding: em(25px) em(25px);
+  @include mq(large) {
+    margin: em(25px) em(25px);
   }
 }
