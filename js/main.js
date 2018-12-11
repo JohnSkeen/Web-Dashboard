@@ -360,15 +360,13 @@ const setPublic = document.getElementById("set-public");
 const timezone = document.getElementById("timezone");
 
 // Sets value of ID based on saved profile settings
-const setDataFromLocalStorage = function() {
+const loadSettings = function() {
   if (emailPref !== null) {
     emailNotes.checked = (emailPref === 'true');
   }
-
   if (setProfile !== null) {
     setPublic.checked = (setProfile === 'true');
   }
-
   if (tmznSettings !== null) {
     timezone.value = tmznSettings;
   }
@@ -411,6 +409,6 @@ if(testStorage() === true){
     });
 
     // Run function to load correct settings
-    setDataFromLocalStorage();
+    loadSettings();
   });
-  }
+}

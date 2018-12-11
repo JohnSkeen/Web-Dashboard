@@ -45,10 +45,6 @@ header li {
 .your {
   font-weight: 700;
   margin-left: em(15px);
-
-  @include mq(medium) {
-    padding-left: em(20px);
-  }
 }
 
 .app {

@@ -428,9 +428,6 @@ header li {
 .your {
   font-weight: 700;
   margin-left: 0.9375em; }
-  @media (min-width: 769px) {
-    .your {
-      padding-left: 1.25em; } }
 
 .app {
   font-weight: 200; }
