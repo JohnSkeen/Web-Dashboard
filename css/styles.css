@@ -657,10 +657,6 @@ header li {
   display: flex;
   align-items: center; }
 
-@media (min-width: 769px) {
-  header li:first-of-type {
-    flex: 1; } }
-
 .header-title {
   color: #fff;
   font-size: 1.25em; }
@@ -986,7 +982,7 @@ fieldset legend {
     .notifications p {
       font-size: 1em; } }
 
-.timezone {
+#timezone {
   width: 100%;
   border-radius: 4px;
   border-color: #b2b2b2;
@@ -1127,7 +1123,25 @@ input:checked + .slider:after {
 #notiContainer {
   position: relative; }
 
-/* A CIRCLE LIKE BUTTON IN THE TOP MENU. */
+@keyframes bellshake {
+  0% {
+    transform: rotate(0); }
+  15% {
+    transform: rotate(5deg); }
+  30% {
+    transform: rotate(-5deg); }
+  45% {
+    transform: rotate(4deg); }
+  60% {
+    transform: rotate(-4deg); }
+  75% {
+    transform: rotate(2deg); }
+  85% {
+    transform: rotate(-2deg); }
+  92% {
+    transform: rotate(1deg); }
+  100% {
+    transform: rotate(0); } }
 #alertIcon {
   height: 22px;
   margin: -3px 10px 0 10px;
@@ -1136,7 +1150,12 @@ input:checked + .slider:after {
     #alertIcon {
       height: 30px; } }
 
-/* THE POPULAR RED NOTIFICATIONS COUNTER. */
+.bell:focus,
+.bell:hover {
+  animation: bellshake 0.5s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  backface-visibility: hidden;
+  transform-origin: top; }
+
 #notiCounter {
   display: block;
   position: absolute;
@@ -1151,7 +1170,6 @@ input:checked + .slider:after {
   -webkit-border-radius: 50%;
   z-index: 1; }
 
-/* THE NOTIFICAIONS WINDOW. THIS REMAINS HIDDEN WHEN THE PAGE LOADS. */
 #notifications {
   display: none;
   width: 250px;
@@ -1168,7 +1186,6 @@ input:checked + .slider:after {
       width: 350px;
       left: -300px; } }
 
-/* AN ARROW LIKE STRUCTURE JUST OVER THE NOTIFICATIONS WINDOW */
 #notifications:before {
   content: '';
   display: block;

@@ -302,6 +302,8 @@ document.addEventListener("DOMContentLoaded", function() {
   autocomplete(document.getElementById("userSearch"), userNames);
 });
 
+// Counter and Notification Drop Down
+
 $(document).ready(function () {
 
     // ANIMATEDLY DISPLAY THE NOTIFICATION COUNTER.
@@ -342,3 +344,73 @@ $(document).ready(function () {
         return false;       // DO NOTHING WHEN CONTAINER IS CLICKED.
     });
 });
+
+// Save Settings to local storage
+
+
+
+// Create const for saved values
+const emailPref = localStorage.getItem('email-notification');
+const setProfile = localStorage.getItem('set-public');
+const tmznSettings = localStorage.getItem('timezone');
+
+// Grab each dom item per ID
+const emailNotes = document.getElementById("email-notification");
+const setPublic = document.getElementById("set-public");
+const timezone = document.getElementById("timezone");
+
+// Sets value of ID based on saved profile settings
+const setDataFromLocalStorage = function() {
+  if (emailPref !== null) {
+    emailNotes.checked = (emailPref === 'true');
+  }
+
+  if (setProfile !== null) {
+    setPublic.checked = (setProfile === 'true');
+  }
+
+  if (tmznSettings !== null) {
+    timezone.value = tmznSettings;
+  }
+}
+
+// Check if localStorage is available
+function testStorage() {
+  var test = 'test';
+    try {
+      localStorage.setItem(test, test);
+      localStorage.removeItem(test);
+      return true;
+    } catch(e) {
+      return false;
+  }
+}
+
+// Runs function if localStorage is enabled
+if(testStorage() === true){
+  // Run function after DOM loaded
+  document.addEventListener("DOMContentLoaded", function() {
+
+    // Save settings to local storage when save button pushed
+    document.getElementById("save").addEventListener("click", function() {
+      localStorage.setItem('email-notification', emailNotes.checked);
+      localStorage.setItem('set-public', setPublic.checked);
+      localStorage.setItem('timezone', timezone.value);
+      alert('Settings successfully saved!');
+    });
+
+    // Send all settings back to default values when cancel pushed
+  document.getElementById("cancel").addEventListener("click", function() {
+      const cancel = confirm('Are you sure you want to cancel changes?');
+
+      if (cancel) {
+        localStorage.setItem('email-notification', emailNotes.checked = null)
+        localStorage.setItem('set-public', setPublic.checked = null)
+        localStorage.setItem('timezone', timezone.value = 'select-timezone')
+      }
+    });
+
+    // Run function to load correct settings
+    setDataFromLocalStorage();
+  });
+  }

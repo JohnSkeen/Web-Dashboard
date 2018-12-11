@@ -33,12 +33,6 @@ header li {
     align-items: center;
 }
 
-header li:first-of-type {
-  @include mq(medium) {
-    flex: 1;
-  }
-}
-
 .header-title {
   color: $white;
   font-size: em(20px);
@@ -66,14 +60,6 @@ header li:first-of-type {
   font-weight: 200;
   vertical-align: top;
 }
-
-// header svg {
-//   height: 20px;
-//
-//   @include mq(medium) {
-//     height: 30px;
-//   }
-// }
 
 .header-border {
   border: $nav-background solid 1px;
@@ -104,12 +90,3 @@ header li:first-of-type {
     padding: 0 em(15px) 0 em(10px);
   }
 }
-//
-// #alertIndicator {
-//   border-radius: 50%;
-//   background-color: $notification;
-//   height: 7px;
-//   width: 7px;
-//   display: inline-block;
-//   margin: -25px 0 0 -7px;
-// }

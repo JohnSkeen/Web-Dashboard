@@ -2,43 +2,24 @@
    Notification Dropdown Styles
 ===========================================*/
 
-// ul {
-//     display: block;
-//     background: #45619D;
-//     list-style: none;
-//     margin: 0;
-//     padding: 12px 10px;
-//     height: 21px;
-// }
-// ul li {
-//     float: left;
-//     font: 13px helvetica;
-//     font-weight: bold;
-//     margin: 3px 0;
-// }
-// ul li a {
-//     color: #FFF;
-//     text-decoration: none;
-//     padding: 6px 15px;
-//     cursor: pointer;
-// }
-// ul li a:hover {
-//     background: #425B90;
-//     text-decoration: none;
-//     cursor: pointer;
-// }
-
 #notiContainer {
     position:relative;
 }
 
-/* A CIRCLE LIKE BUTTON IN THE TOP MENU. */
+@keyframes bellshake {
+  0% { transform: rotate(0); }
+  15% { transform: rotate(5deg); }
+  30% { transform: rotate(-5deg); }
+  45% { transform: rotate(4deg); }
+  60% { transform: rotate(-4deg); }
+  75% { transform: rotate(2deg); }
+  85% { transform: rotate(-2deg); }
+  92% { transform: rotate(1deg); }
+  100% { transform: rotate(0); }
+}
+
 #alertIcon {
     height: 22px;
-    // line-height: 22px;
-    // border-radius: 50%;
-    // -moz-border-radius: 50%;
-    // -webkit-border-radius: 50%;
     margin: -3px 10px 0 10px;
     cursor: pointer;
 
@@ -47,7 +28,13 @@
     }
 }
 
-/* THE POPULAR RED NOTIFICATIONS COUNTER. */
+.bell:focus,
+.bell:hover {
+  animation: bellshake .5s cubic-bezier(.36,.07,.19,.97) both;
+  backface-visibility: hidden;
+  transform-origin: top;
+}
+
 #notiCounter {
     display: block;
     position: absolute;
@@ -63,7 +50,6 @@
     z-index: 1;
 }
 
-/* THE NOTIFICAIONS WINDOW. THIS REMAINS HIDDEN WHEN THE PAGE LOADS. */
 #notifications {
     display: none;
     width: 250px;
@@ -81,7 +67,7 @@
       left: -300px;
     }
 }
-/* AN ARROW LIKE STRUCTURE JUST OVER THE NOTIFICATIONS WINDOW */
+
 #notifications:before {
     content: '';
     display: block;
