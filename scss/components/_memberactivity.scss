@@ -2,9 +2,17 @@
    Member Activity Styles
 ===========================================*/
 
+.member-activity {
+  padding-bottom: 10px;
+}
+
 .member-activity img {
   border-radius: 50%;
-  width: 5em;
+  width: 3.5em;
+
+  @include mq(medium) {
+    width: 5em;
+  }
 
   @include mq(large) {
     width: 3em;
@@ -57,7 +65,11 @@
 
 .new-member-info,
 .recent-activity-info {
-  padding-left: 15px;
+  padding-left: 8px;
+
+  @include mq(medium) {
+    padding-left: 15px;
+  }
 }
 
 .new-member-info p,

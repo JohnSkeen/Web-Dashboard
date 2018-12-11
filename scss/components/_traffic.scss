@@ -1,0 +1,144 @@
+/*===========================================
+  Traffic Chart Styles
+===========================================*/
+
+
+// Traffic chart
+
+.traffic-line {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: $font-weight--bold;
+  color: $boulder;
+  list-style-type: none;
+  padding: 0;
+  width: 95%;
+  margin: 0 auto;
+
+  @include mq(medium) {
+    flex-direction: row;
+  }
+}
+
+.traffic-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 0;
+}
+
+.traffic-line li {
+  list-style-type: none;
+  padding: em(5px) em(5px);
+  font-size: em(14px);
+
+  @include mq(medium) {
+    padding: em(10px) em(10px);
+    font-size: em(16px);
+  }
+}
+
+.traffic-line span {
+  padding-top: em(20px);
+
+  @include mq(medium) {
+    padding: 0;
+    margin-right: auto;
+  }
+}
+
+.traffic-btn {
+  border: none;
+  background-color: $white;
+  color: $boulder;
+  font-weight: $font-weight--bold;
+  padding: em(5px) em(5px);
+}
+
+.traffic-btn:hover {
+  background-color: $de-york;
+  color: $white;
+  border-radius: 15px;
+}
+
+.traffic-btn:focus {
+  background-color: $de-york;
+  border-radius: 15px;
+  outline: none;
+  color: $white;
+}
+
+.traffic-chart,
+.bar-chart,
+.doughnut-chart {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.hourly-chart,
+.daily-chart,
+.weekly-chart,
+.monthly-chart {
+  height: 250px;
+  @include mq(medium) {
+    height: 300px;
+  }
+  @include mq(large) {
+    height: 350px;
+  }
+}
+
+.bar-chart,
+.doughnut-chart {
+
+  @include mq(medium) {
+    width: 48%;
+  }
+}
+
+.other-charts {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+
+  @include mq(medium) {
+    flex-direction: row;
+  }
+}
+
+.member-activity {
+  @include mq(large) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    margin: 0 auto;
+  }
+}
+
+input:focus,
+select:focus,
+button:focus,
+textarea:focus {
+  outline-color: $nav-background;
+  border-color: transparent;
+}
+
+.other-charts,
+.member-activity {
+  border-top: 1px $alto solid;
+  border-bottom: 1px $alto solid;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding-top: 10px;
+}
+
+.other-charts {
+  padding-bottom: 25px;
+}

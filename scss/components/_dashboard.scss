@@ -1,0 +1,135 @@
+/*===========================================
+  Dashboard Styles
+===========================================*/
+
+
+.wrapper .dashboard {
+  @include mq(large) {
+    width: 95%;
+    padding-left: 64px;
+    margin: 0 auto;
+  }
+
+  @include mq(xlarge) {
+    width: 70%;
+    padding-left: 64px;
+    margin: 0 auto;
+  }
+}
+
+.dashboard {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  @include mq(medium) {
+    display: block;
+  }
+
+  @include mq(large) {
+    padding-top: 74px;
+  }
+}
+
+// Dashboard header
+
+.dashboard-header {
+  color: $boulder;
+  font-size: em(16px);
+  text-align: center;
+  width: 95%;
+  margin: 0 auto;
+
+  @include mq(medium) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+   }
+}
+
+.fa-search {
+  color: $boulder;
+}
+
+/* Style the search field */
+form.search-bar input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid $boulder;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-right: none;
+  float: left;
+  width: 90%;
+  background: $white;
+
+  @include mq(medium) {
+    width: 80%;
+  }
+}
+
+/* Style the submit button */
+form.search-bar button {
+  float: left;
+  width: 10%;
+  height: 41px;
+  padding: 10px;
+  background: $white;
+  color: $white;
+  font-size: 17px;
+  border: 1px solid $boulder;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-left: none;
+  cursor: pointer;
+
+  @include mq(medium) {
+    width: 20%;
+  }
+}
+
+.search-bar input,
+.search-bar button {
+  outline: none;
+}
+
+form.example button:active {
+  background: $silver-chalice;
+}
+
+/* Clear floats */
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.alertBox {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  background: $ship-cove;
+  color: $white;
+  border-radius: 5px;
+  width: 90%;
+  margin: 10px auto;
+  align-items: center;
+  justify-content: space-between;
+
+  @include mq(medium) {
+    width: 95%;
+  }
+}
+
+#alertMessage,
+#alertTitle,
+#alertClose {
+  padding: 5px 5px;
+
+  @include mq(medium) {
+    padding: 5px 15px;
+  }
+}
