@@ -1,3 +1,6 @@
+//===========================================
+//  Chart Building & Functionality
+//===========================================
 
 // Select Chart
 
@@ -33,6 +36,10 @@ $('.monthly').click(function() {
   $('.weekly-chart').hide();
   $('.monthly-chart').fadeIn();
 });
+
+//===========================================
+//  Chart Layout
+//===========================================
 
 // Hourly Traffic Chart
 
@@ -187,12 +194,18 @@ var myDoughnutChart = new Chart(doughnutChart, {
   }
 });
 
+//===========================================
+//  Closing the Alert Box
+//===========================================
+
 // Alert close
 $('#alertClose').click(function(){
   $('.alertBox').fadeOut();
 });
 
-// Autocomplete
+//===========================================
+//  Autocomplete Functions
+//===========================================
 
 //supply userName array
 const userNames = ["Victoria Chambers", "Dale Byrd", "Dawn Wood","Dan Oliver", "Josh Sullivan"];
@@ -302,7 +315,9 @@ document.addEventListener("DOMContentLoaded", function() {
   autocomplete(document.getElementById("userSearch"), userNames);
 });
 
-// Counter and Notification Drop Down
+//===========================================
+//  Counter and Notification Dropdowns
+//===========================================
 
 $(document).ready(function () {
 
@@ -345,9 +360,9 @@ $(document).ready(function () {
     });
 });
 
-// Save Settings to local storage
-
-
+//===========================================
+//  Creating and Implementing Local Storage
+//===========================================
 
 // Create const for saved values
 const emailPref = localStorage.getItem('email-notification');
@@ -411,4 +426,25 @@ if(testStorage() === true){
     // Run function to load correct settings
     loadSettings();
   });
+}
+
+//===========================================
+//  Message Form Validation
+//===========================================
+
+function messageValidation() {
+  const userSearch = document.getElementById('userSearch').value;
+  const userMsg = document.getElementById('userMsg').value;
+  if (userSearch == "") {
+    alert("Please enter a user name.");
+    return false;
+  }
+    if (userMsg == "") {
+    alert("Please add a message.");
+    return false;
+  }
+    if (userMsg && userSearch != "") {
+    alert("Thank you, your message has been sent!")
+    return true;
+  }
 }
